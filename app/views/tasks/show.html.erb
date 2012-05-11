@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @task.name %><br><br>
+  <b>Chases the following</b>
+  <% @relationships.each do |r| %><br>
+  <%= r.name %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
